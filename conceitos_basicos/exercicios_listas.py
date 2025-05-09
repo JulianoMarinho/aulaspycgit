@@ -166,15 +166,113 @@
 ## Duplicar vogais: Peça ao usuário uma palavra. Crie uma nova string em que todas as vogais sejam duplicadas. 
 # Exemplo: casa → caasaa.
 
-palavra = input("Digite uma palavra:")
+# palavra = input("Digite uma palavra:")
 
-duplica_vogais = [letra * 2 if letra in 'aeiouAEIOU' else letra for letra in palavra]
+# duplica_vogais = [letra * 2 if letra in 'aeiouAEIOU' else letra for letra in palavra]
 
-nova_palavra = ''.join(duplica_vogais)
+# nova_palavra = ''.join(duplica_vogais)
 
-print(nova_palavra)
+# print(nova_palavra)
 
 #O método .join() transforma uma lista de strings em uma única string. Ele junta todos os elementos 
 # da lista, usando como separador o que estiver antes do .join().
 # Funciona apenas com listas de strings, então se você tentar usar com números, 
 # dá erro — a menos que converta para string antes.
+
+## USO DO JOIN
+
+# Peça ao usuário uma frase e transforme-a em uma lista de palavras. Depois, junte 
+# essa lista novamente em uma string com um hífen (-) entre as palavras.
+
+# frase = input("Digite uma frase: ")
+
+# palavras = frase.split()
+
+# com_hifen = '-'.join(palavras)
+
+# print(com_hifen)
+
+# Receba uma palavra do usuário e retorne a palavra com cada letra separada por um espaço.
+# Exemplo:
+# Entrada: python
+# Saída: p y t h o n
+
+# palavra = input("Digite uma palavra: ")
+
+# print(' '.join(palavra))
+
+
+# Peça uma frase ao usuário. Remova todas as vogais e junte o restante com .join() para formar uma nova string.
+
+# frase = "Ola mundo"
+
+# letras = [letra for letra in frase if letra not in 'AaEeIiOoUu']
+
+# print(letras)
+
+# Peça ao usuário uma frase e inverta a ordem das palavras, mantendo as palavras originais intactas.
+
+# Exemplo:
+# Entrada: hoje é um dia lindo
+# Saída: lindo dia um é hoje
+
+# frase = "hoje é um dia lindo"
+
+# palavras = frase.split()
+# palavras.reverse()
+
+# saida = ' '.join(palavras) # Junta a lista
+# print(saida)
+
+# Peça uma palavra e exiba todas as letras separadas por -.
+
+# Exemplo:
+# Entrada: casa
+# Saída: c-a-s-a
+
+# palavra = input("Digite uma palavra: ")
+
+# saida = '-'.join(palavra)
+
+# print(saida)
+
+# 🔹 Exercício 3 — Juntar palavras com vírgula
+# Peça ao usuário uma frase e exiba todas as palavras separadas por vírgula e espaço.
+
+# Exemplo:
+# Entrada: amo programar em Python
+# Saída: amo, programar, em, Python
+
+# entrada = "amo programar em Python"
+# palavras = entrada.split()
+# saida = ', '.join(palavras)
+
+# print(saida)
+
+# 🔹 Exercício 4 — Substituir espaços por underline
+# Peça uma frase e retorne com os espaços substituídos por _.
+
+# Exemplo:
+# Entrada: isso é muito legal
+# Saída: isso_é_muito_legal
+
+# entrada = "isso é muito legal"
+# palavras = entrada.split()
+# saida = '_'.join(palavras)
+
+# print(saida)
+
+# 🔹 Exercício 5 — Somente primeiras letras
+# Peça ao usuário uma frase e mostre apenas a primeira letra de cada palavra, separadas por . (ponto).
+
+# Exemplo:
+# Entrada: Python é incrível
+# Saída: P.é.i
+
+# entrada = "Python é incrível"
+
+# palavras = entrada.split()
+
+# print('.'.join([palavra[0] for palavra in palavras]))
+
+
