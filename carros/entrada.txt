@@ -1,0 +1,83 @@
+É importante salvar as dependencias de um projeto dentro de um arquivos
+chamado requeriments.txt
+
+existe um comando do pip, que é o pip freeze, ele mostra todas as bibliotecas e pacotes de terceiros 
+usandos para rodar o projeto.
+
+comando para salvar o output do freeze no requeriments:
+
+pip freeze > requirements.txt
+
+Obs.: para o programador que desaja subir um arquivo de requeriments
+
+use o comando:
+
+pip install -r requeriments.txt 
+
+Isso quer dizer para o pip instalar todas as dependências listadas
+do requeriments.txt
+
+========================================================================
+AMBIENTES VIRTUAIS EM PYTHON
+
+O que é um ambiente virtual e para que ele serve?
+
+Um ambiente virtual (virtual environment) é um espaço isolado dentro do seu sistema, criado para um projeto específico, 
+onde você pode instalar bibliotecas e pacotes sem interferir no resto do sistema.
+
+🎯 Para que ele serve?
+✅ Evita conflitos de versões
+Imagine que um projeto usa pandas==1.3.0 e outro usa pandas==2.1.0. Sem ambientes virtuais, isso vira uma bagunça.
+
+✅ Organiza dependências por projeto
+Cada projeto tem suas próprias bibliotecas, guardadas separadamente.
+
+✅ Facilita o compartilhamento
+Com um requirements.txt, qualquer pessoa pode recriar o mesmo ambiente com pip install -r requirements.txt.
+
+✅ Evita precisar de permissões de administrador
+Instala as bibliotecas no seu diretório local, sem precisar mexer no sistema todo.
+
+
+
+========================================================================
+Passo importantes na criação de um projeto
+
+1º: Criando um ambiente virtual para isolar todas as dependencias dele
+
+python -m venv venv
+
+2º: Ativando o ambiente virtual, aqui as dependências vão todas para esse
+ambiente.
+
+.\venv\Scripts\activate 
+
+Aqui vai ficar um prefixo (venv) no seu terminal indicando 
+que a venv está ativa.
+
+3º: Instalando o django
+
+pip install django
+
+para verificar que o django foi instalado da forma correta, use o comando
+django-admin --version
+
+4º: Criando um projeto django
+
+django-admin startproject <nome do projeto com .>
+Ex.: django-admin startproject app .
+
+Esse ponto é muito importante, porque indica para o django onde 
+você quer iniciar os arquivos iniciais do projeto
+
+"django inicie um projeto chamado app na pasta raiz que estou localizado"
+
+5º Testando se tudo esta funcionando
+
+python manage.py runserver
+
+"Suba o servidor da nossa aplicação localmente para vermos se está tudo certo"
+
+
+==============================================================
+
